@@ -1,0 +1,6 @@
+<div *ngIf="colleges && colleges.length > 0">
+  <select [(ngModel)]="selectedCollege">
+    <option *ngFor="let college of colleges" [ngValue]="college">{{college.name}}</option>
+  </select>
+  <button (click)="addCollege()">Add</button>
+</div>
