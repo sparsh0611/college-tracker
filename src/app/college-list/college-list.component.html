@@ -1,0 +1,18 @@
+<section class="unapplied-colleges">
+  <add-college [(colleges)]="unappliedColleges" (collegeAdded)="onCollegeAdded($event)"></add-college>
+</section>
+<section>
+  <div class='row'>
+    <div>Filter by:</div>
+    <div>
+      <input type='text' [(ngModel)]='listFilter' />
+    </div>
+  </div>
+</section>
+<section class="applied-colleges">
+  <div>
+    <div *ngFor="let college of appliedColleges | filterCollege: listFilter">
+      <college-item [data]="college"></college-item>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "Albany College of Pharmacy and Health Sciences",
+		"details": "College 1 details",
+		"isApplied": false
+	},
+	{
+		"id": 2,
+		"name": "American Jewish University",
+		"details": "College 2 details",
+		"isApplied": false
+	},
+	{
+		"id": 3,
+		"name": "American University in Bulgaria",
+		"details": "College 3 details",
+		"isApplied": false
+	}
+]

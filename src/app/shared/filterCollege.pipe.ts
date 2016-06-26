@@ -7,7 +7,9 @@ import {College} from '../models/College';
 })
 
 export class FilterCollege implements PipeTransform {
-	transform(colleges: College[], args) {
-		return colleges.filter(item => item.isApplied == args.isApplied);
-	}
+	transform(colleges: College[], filter: string): College[] {
+       	filter = filter ? filter.toLowerCase().trim() : null;
+      	return filter ? colleges.filter((college: College) =>
+			  college.name.toLowerCase().indexOf(filter) !== -1) : colleges;
+    }
 }

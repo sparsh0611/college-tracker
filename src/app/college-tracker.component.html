@@ -1,13 +1,6 @@
 <h1>
   {{title}}
 </h1>
-<section class="unapplied-colleges">
-  <add-college [(colleges)]="unappliedColleges" (collegeAdded)="onCollegeAdded($event)"></add-college>
-</section>
-<section class="applied-colleges">
-  <ol>
-    <li *ngFor="let college of appliedColleges">
-      <college-item [data]="college"></college-item>
-    </li>
-  </ol>
-</section>
+<div>
+  <router-outlet></router-outlet>
+</div>

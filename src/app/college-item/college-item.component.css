@@ -1,7 +1,9 @@
-.completed {
-	background-color: #90f190;
-}
-div {
+div{
+	width: 400px;
+	margin-bottom: 5px;
+	border: 1px solid gray;
+	background-color: #e7e7e7;
 	padding: 10px;
+	border-radius: 5px;
 	cursor: pointer;
 }
