@@ -27,7 +27,10 @@ export class CollegeListComponent implements OnInit {
 	ngOnInit() {
 		var colleges = this._collegeStorageService.getAll();
 		if (colleges.length == 0) {
-			this._collegeHttpService.getColleges().subscribe(data => this.filterAppliedCollegeRecords(data));
+			this._collegeHttpService.getColleges().subscribe(data => {
+				this.filterAppliedCollegeRecords(data);
+				this._collegeStorageService.saveAll(data);
+			});
 		}
 		else {
 			this.filterAppliedCollegeRecords(colleges);

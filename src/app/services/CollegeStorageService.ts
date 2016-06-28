@@ -19,4 +19,10 @@ export class CollegeStorageService {
 		}
 		return colleges;
 	}
+
+	saveAll(colleges: College[]): void {
+		for (var college of colleges) {
+			localStorage.setItem('College_' + college.id.toString(), JSON.stringify(college));
+		}
+	}
 }

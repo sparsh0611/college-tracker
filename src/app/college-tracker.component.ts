@@ -14,8 +14,8 @@ import { HTTP_PROVIDERS } from '@angular/http';
 })
 
 @Routes([
-	{ path: '/colleges', component: CollegeListComponent },
-	{ path: '/college/:id', component: CollegeDetailComponent }
+    { path: '/colleges', component: CollegeListComponent },
+	  { path: '/college/:id', component: CollegeDetailComponent }
 ])
 
 export class CollegeTrackerAppComponent {
