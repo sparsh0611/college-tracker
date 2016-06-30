@@ -1,4 +1,4 @@
-div{
+.college-item {
 	width: 400px;
 	margin-bottom: 5px;
 	border: 1px solid gray;
@@ -6,4 +6,7 @@ div{
 	padding: 10px;
 	border-radius: 5px;
 	cursor: pointer;
+}
+.test-class {
+	background-color: red;
 }

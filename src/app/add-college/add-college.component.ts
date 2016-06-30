@@ -1,12 +1,15 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter, Input, ViewEncapsulation } from '@angular/core';
 import { College } from '../models/College';
 import { CollegeStorageService } from '../services/CollegeStorageService';
+import { UnlessDirective } from '../shared/myUnless.directive';
 
 @Component({
 	moduleId: module.id,
 	selector: 'add-college',
 	templateUrl: 'add-college.component.html',
-	providers: [CollegeStorageService]
+	styleUrls: ['add-college.component.css'],
+	providers: [CollegeStorageService],
+	directives: [UnlessDirective]
 })
 
 export class AddCollege {

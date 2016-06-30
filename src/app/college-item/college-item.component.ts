@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
-import {College} from '../models/College';
-import { ROUTER_DIRECTIVES, Router } from '@angular/router';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { College } from '../models/College';
+import { Router } from '@angular/router';
 
 @Component({
 	moduleId: module.id,
 	selector: 'college-item',
 	templateUrl: 'college-item.component.html',
 	styleUrls: ['college-item.component.css'],
-	directives: [ROUTER_DIRECTIVES]
+	encapsulation: ViewEncapsulation.Emulated
 })
 
 export class CollegeItem {
@@ -16,6 +16,7 @@ export class CollegeItem {
 	constructor(private _router: Router) { }
 
 	goToDetails(college: College) {
+		console.log(this._router.routeTree);
 		this._router.navigate(['/college', college.id]);
 	}
 }

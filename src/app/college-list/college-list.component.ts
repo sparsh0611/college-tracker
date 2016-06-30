@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CollegeHttpService } from '../services/CollegeHttpService';
 import { CollegeStorageService } from '../services/CollegeStorageService';
 import { AddCollege } from '../add-college/add-college.component';
 import { College } from '../models/College';
 import { CollegeItem } from '../college-item/college-item.component';
-import { CollegeDetailComponent } from '../college-detail/college-detail.component';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { FilterCollege } from '../shared/filterCollege.pipe';
+import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { CollegeDetailComponent } from '../college-detail/college-detail.component';
 
 @Component({
 	moduleId: module.id,
@@ -17,6 +17,10 @@ import { FilterCollege } from '../shared/filterCollege.pipe';
 	directives: [AddCollege, CollegeItem, ROUTER_DIRECTIVES],
 	pipes: [FilterCollege]
 })
+
+// @Routes([
+// 	{ path: '/college/:id', component: CollegeDetailComponent }
+// ])
 
 export class CollegeListComponent implements OnInit {
 	appliedColleges: College[] = [];

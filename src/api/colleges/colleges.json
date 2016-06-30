@@ -16,5 +16,23 @@
 		"name": "American University in Bulgaria",
 		"details": "College 3 details",
 		"isApplied": false
+	},
+	{
+		"id": 4,
+		"name": "Adelphi University",
+		"details": "College 4 details",
+		"isApplied": false
+	},
+	{
+		"id": 5,
+		"name": "Allegheny College",
+		"details": "College 5 details",
+		"isApplied": false
+	},
+	{
+		"id": 6,
+		"name": "Alma College",
+		"details": "College 6 details",
+		"isApplied": false
 	}
 ]

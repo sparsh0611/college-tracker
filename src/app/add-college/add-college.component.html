@@ -1,4 +1,5 @@
-<div *ngIf="colleges && colleges.length > 0">
+<!-- <div *myUnless="!colleges || !colleges.length"> -->
+<div *ngIf="colleges?.length > 0">
   <select [(ngModel)]="selectedCollege">
     <option *ngFor="let college of colleges" [ngValue]="college">{{college.name}}</option>
   </select>
